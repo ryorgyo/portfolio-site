@@ -1,0 +1,16 @@
+{
+  "dartsass.targetDirectory": "styles/css", //どのフォルダに出力するか
+  "dartsass.autoPrefixBrowsersList": [
+    //Autoprefixerの指定
+    "> 3% in JP",
+    "ie 11",
+    "android 4.4",
+    "last 1 versions"
+  ],
+  "dartsass.outputFormat": "cssonly",
+  "dartsass.sassBinPath": "/Users/ryorgyo/Documents/next.js/portfolio/node_modules/.bin/sass",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
