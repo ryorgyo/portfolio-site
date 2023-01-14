@@ -5,9 +5,10 @@ import type { workCardType, blogCardType } from "../page";
 import { Card } from "./card";
 import { H2Animation } from "./h2Animation";
 
-const BlogList: FC<{
+export const List: FC<{
   workCards?: workCardType;
   blogCards?: blogCardType;
+  style: string;
 }> = (props) => {
   const [hover, setHover] = useState(false);
   const handleMouseOver: MouseEventHandler<HTMLHeadingElement> = () => {
@@ -15,7 +16,7 @@ const BlogList: FC<{
   };
 
   return (
-    <div className={styles.blogList}>
+    <div className={styles[props.style]}>
       <h2
         className={styles.title}
         onMouseOver={handleMouseOver}
@@ -23,9 +24,11 @@ const BlogList: FC<{
       >
         <H2Animation hover={hover} />
       </h2>
-      <Card blogCards={props.blogCards} />
+      {props.workCards ? (
+        <Card workCards={props.workCards} />
+      ) : (
+        <Card blogCards={props.blogCards} />
+      )}
     </div>
   );
 };
-
-export default BlogList;

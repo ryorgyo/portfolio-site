@@ -41,7 +41,7 @@
   width: min-content;
   margin-left: 8.8rem;
 }
-.container main .hero .right .headline {
+.container main .hero .right .headline p {
   font-size: 1.6rem;
   line-height: 1.6rem;
 }
@@ -120,12 +120,10 @@
   margin-bottom: 15rem;
 }
 .container main .workList .title {
-  font-size: 3rem;
-  line-height: 3rem;
-  font-weight: bold;
+  width: 30rem;
+  height: 8.3rem;
   border: #000 solid 0.4rem;
   width: 30rem;
-  padding: 2.5rem;
   transform: rotate(90deg);
   transform-origin: 0 0;
   display: flex;
@@ -133,23 +131,54 @@
   position: absolute;
   top: -5rem;
   right: -6.5rem;
+  box-sizing: content-box;
+}
+.container main .workList .title ::after {
+  content: "Web Design";
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: max-content;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+.container main .workList .title canvas {
+  width: 30rem;
+  height: 8.3rem;
 }
 .container main .blogList {
   padding: 0 23.4rem 0 7.9rem;
   position: relative;
 }
 .container main .blogList .title {
-  font-size: 3rem;
-  line-height: 3rem;
-  font-weight: bold;
   border: #000 solid 0.4rem;
   width: 30rem;
-  padding: 2.5rem;
+  height: 8.3rem;
   position: absolute;
   transform: translateX(-50%);
   transform: translateY(-50%);
   top: -5%;
   left: 2.5%;
+  box-sizing: content-box;
+}
+.container main .blogList .title ::after {
+  content: "Blog";
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: max-content;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+.container main .blogList .title canvas {
+  width: 30rem;
+  height: 8.3rem;
 }
 .container main .snsContainer .snsList {
   display: flex;

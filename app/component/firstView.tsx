@@ -21,25 +21,32 @@ export const FirstView = (props: props) => {
       </div>
       <div className={styles.right}>
         <div className={styles.headline}>
-          {props.tech.map((tech: string) => {
-            return <p key={tech}>{tech}</p>;
+          {props.tech.map((tech: string, index) => {
+            return <p key={index}>{tech}</p>;
           })}
         </div>
         <div className={styles.slogan}>
-          {props.slogan.map((slo: string) => {
-            return <h3 key={slo}>{slo}</h3>;
+          {props.slogan.map((slo: string, index) => {
+            return <h3 key={index}>{slo}</h3>;
           })}
         </div>
         <div className={styles.card}>
           <p className={styles.discription}>{props.profile}</p>
           <div className={styles.selfIntro}>
             <div className={styles.profile}>
-              <Image src="/profile.jpg" alt="profile" layout="fill" />
+              <Image
+                src="/profile.jpg"
+                alt="profile"
+                fill
+                sizes="(max-width: 768px) 100vw,
+                            (max-width: 1200px) 50vw,
+                            33vw"
+              />
             </div>
             <div className={styles.profileRight}>
               <div className={styles.intro}>
-                {props.intro.map((intro: string) => {
-                  return <p key={intro}>{intro}</p>;
+                {props.intro.map((intro: string, index) => {
+                  return <p key={index}>{intro}</p>;
                 })}
               </div>
               <Link className={styles.link} href={"/"}>

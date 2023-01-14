@@ -10,9 +10,9 @@ export const WorkCard: FC<{
       <p>{props.card.createdDate}</p>
       <p>{props.card.cop}</p>
       <div className={styles.workCategory}>
-        {props.card.category?.map((cate) => {
+        {props.card.category?.map((cate, index) => {
           return (
-            <p className={styles[bgColorChecker(cate)]} key={cate}>
+            <p className={styles[bgColorChecker(cate)]} key={index}>
               #{cate}
             </p>
           );

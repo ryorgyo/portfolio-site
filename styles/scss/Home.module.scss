@@ -41,9 +41,9 @@
         width: min-content;
         margin-left: 8.8rem;
         .headline {
-          font-size: 1.6rem;
-          line-height: 1.6rem;
           p {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
             &:last-child {
               margin: 0 0 10rem 0;
             }
@@ -126,12 +126,10 @@
       position: relative;
       margin-bottom: 15rem;
       .title {
-        font-size: 3rem;
-        line-height: 3rem;
-        font-weight: bold;
+        width: 30rem;
+        height: 8.3rem;
         border: #000 solid 0.4rem;
         width: 30rem;
-        padding: 2.5rem;
         transform: rotate(90deg);
         transform-origin: 0 0;
         display: flex;
@@ -139,23 +137,54 @@
         position: absolute;
         top: -5rem;
         right: -6.5rem;
+        box-sizing: content-box;
+        ::after {
+          content: "Web Design";
+          font-size: 3rem;
+          line-height: 3rem;
+          font-weight: bold;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          width: max-content;
+          transform: translateX(-50%);
+          transform: translateY(-50%);
+        }
+        canvas {
+          width: 30rem;
+          height: 8.3rem;
+        }
       }
     }
     .blogList {
       padding: 0 23.4rem 0 7.9rem;
       position: relative;
       .title {
-        font-size: 3rem;
-        line-height: 3rem;
-        font-weight: bold;
         border: #000 solid 0.4rem;
         width: 30rem;
-        padding: 2.5rem;
+        height: 8.3rem;
         position: absolute;
         transform: translateX(-50%);
         transform: translateY(-50%);
         top: -5%;
         left: 2.5%;
+        box-sizing: content-box;
+        ::after {
+          content: "Blog";
+          font-size: 3rem;
+          line-height: 3rem;
+          font-weight: bold;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          width: max-content;
+          transform: translateX(-50%);
+          transform: translateY(-50%);
+        }
+        canvas {
+          width: 30rem;
+          height: 8.3rem;
+        }
       }
     }
     .snsContainer {

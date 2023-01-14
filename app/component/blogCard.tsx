@@ -9,17 +9,17 @@ export const BlogCard: FC<{
     <div className={styles.blogDiscription}>
       <h3>{props.card.title}</h3>
       <div className={styles.blogCategory}>
-        {props.card.category?.map((cate) => {
+        {props.card.category?.map((cate, index) => {
           return (
-            <p className={styles[bgColorChecker(cate)]} key={cate}>
+            <p className={styles[bgColorChecker(cate)]} key={index}>
               #{cate}
             </p>
           );
         })}
       </div>
       <div className={styles.date}>
-        {props.card.date?.map((date) => {
-          return <p key={date}>{date}</p>;
+        {props.card.date?.map((date, index) => {
+          return <p key={index}>{date}</p>;
         })}
       </div>
     </div>

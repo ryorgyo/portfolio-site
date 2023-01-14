@@ -41,16 +41,16 @@ export const Card: FC<{
 
   return (
     <div className={styles.Container}>
-      {cards.map((card: cardType) => {
+      {cards.map((card: cardType, index) => {
         return (
-          <div className={styles.Card} key={card.cop}>
+          <div className={styles.Card} key={index}>
             <div className={styles.Img}>
               <Image src="" alt="" layout=""></Image>
             </div>
             {/* workCardsが空欄でない時のdiscription欄のレイアウト */}
-            {props.workCards && <WorkCard card={card} key={card.cop} />}
+            {props.workCards && <WorkCard card={card} />}
             {/* blogCardsが空欄でない時のdiscription欄のレイアウト */}
-            {props.blogCards && <BlogCard card={card} key={card.title} />}
+            {props.blogCards && <BlogCard card={card} />}
           </div>
         );
       })}
